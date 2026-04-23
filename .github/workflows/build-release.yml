@@ -1,5 +1,6 @@
 # Tests on PRs (base: main, dev, prod) and on pushes to main, dev, prod.
 # PyInstaller + GitHub Release (assets + auto notes) only on push to `prod` (bump [project].version in pyproject.toml in that merge).
+# Actions use the Node.js 24 runtime (see actions/checkout, setup-python, upload/download-artifact changelogs).
 
 name: Test and build binaries
 
@@ -20,10 +21,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
           cache: pip
@@ -55,10 +56,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
           cache: pip
@@ -105,21 +106,21 @@ jobs:
 
       - name: Upload Windows bundle
         if: runner.os == 'Windows'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.artifact_name }}
           path: mx-asap-windows.zip
 
       - name: Upload Linux bundle
         if: runner.os == 'Linux'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.artifact_name }}
           path: mx-asap-linux.zip
 
       - name: Upload macOS bundle
         if: runner.os == 'macOS'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.artifact_name }}
           path: mx-asap-macos.zip
@@ -133,25 +134,25 @@ jobs:
       contents: write
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ github.sha }}
 
       - name: Download Windows bundle
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: mx-asap-win
           path: release-assets
 
       - name: Download Linux bundle
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: mx-asap-lin
           path: release-assets
 
       - name: Download macOS bundle
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: mx-asap-mac
           path: release-assets
