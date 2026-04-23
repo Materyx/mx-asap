@@ -175,7 +175,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          V="$(python3 -c "import tomllib, pathlib; print(tomllib.load(pathlib.Path('pyproject.toml').read_bytes())['project']['version'])")"
+          V="$(python3 -c "import tomllib, pathlib; print(tomllib.loads(pathlib.Path('pyproject.toml').read_text(encoding='utf-8'))['project']['version'])")"
           TAG="v${V}"
           if gh release view "${TAG}" >/dev/null 2>&1; then
             echo "Release ${TAG} already exists. Bump the version in pyproject.toml and merge the change into prod in a new PR before releasing again."
