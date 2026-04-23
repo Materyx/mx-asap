@@ -1,0 +1,2 @@
+# One-off and CI: PyInstaller frozen app for mx-asap
+pyinstaller>=6.0
