@@ -1,12 +1,13 @@
 """
-Load string tables from CSV and provide runtime language switching.
+Load string tables from a line-oriented file and provide runtime language switching.
 
-Default language is Russian (RU). CSV columns are locale codes in lower case.
+The bundled ``strings.csv`` uses the multi-character delimiter ``" :: "`` (space, two colons, space)
+between columns so commas inside translated text need no escaping. The first line is a header
+with lower-case locale codes. Default language is Russian (``ru``).
 """
 
 from __future__ import annotations
 
-import csv
 import logging
 from importlib import resources as importlib_resources
 from typing import Final
@@ -16,6 +17,8 @@ from PySide6.QtCore import QObject, Signal
 logger = logging.getLogger(__name__)
 
 _DEFAULT_LANG: Final[str] = "ru"
+# Delimiter between columns in ``n2_param/resources/strings.csv`` (not a single comma).
+_STRINGS_FIELD_SEP: Final[str] = " :: "
 
 
 class Translator(QObject):
@@ -92,27 +95,33 @@ class Translator(QObject):
         self._ingest_csv_text(csv_text)
 
     def _ingest_csv_text(self, csv_text: str) -> None:
-        """Parse CSV content with header row: key,en,ru,cn,..."""
-        reader = csv.DictReader(csv_text.splitlines())
-        if reader.fieldnames is None:
-            raise ValueError("CSV has no header row")
-        fieldnames = [fn.strip().lower() for fn in reader.fieldnames if fn is not None]
+        """
+        Parse the strings file: first line is ``key :: en :: ru :: cn`` (arbitrary language columns).
+        """
+        lines = [ln for ln in csv_text.splitlines() if ln.strip()]
+        if not lines:
+            raise ValueError("empty strings file")
+        sep = _STRINGS_FIELD_SEP
+        fieldnames = [c.strip().lower() for c in lines[0].split(sep)]
         key_field = "key"
         if key_field not in fieldnames:
-            raise ValueError("CSV must include a 'key' column")
-
+            raise ValueError("strings file must include a 'key' column")
+        n_cols = len(fieldnames)
         lang_cols = [fn for fn in fieldnames if fn != key_field]
         for lang in lang_cols:
             self._tables.setdefault(lang, {})
 
-        for row in reader:
-            if row.get("key") is None:
-                continue
-            key = str(row["key"]).strip()
+        for line_no, line in enumerate(lines[1:], start=2):
+            parts = [c.strip() for c in line.split(sep)]
+            if len(parts) != n_cols:
+                msg = (
+                    f"strings.csv line {line_no}: expected {n_cols} columns"
+                    f" (delimiter {sep!r}), got {len(parts)}"
+                )
+                raise ValueError(msg)
+            key = parts[fieldnames.index(key_field)]
             if not key:
                 continue
-            for lang in lang_cols:
-                cell = row.get(lang)
-                if cell is None:
-                    continue
-                self._tables[lang][key] = str(cell)
+            for fn in lang_cols:
+                col_idx = fieldnames.index(fn)
+                self._tables[fn][key] = str(parts[col_idx])

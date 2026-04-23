@@ -1,76 +1,76 @@
-key,en,ru,cn
-tab.summary,Summary,Сводка,汇总
-summary.file_list_title,Files,Файлы,文件
-menu.file,File,Файл,文件
-menu.file.open,Import...,Импорт…,导入…
-menu.file.exit,Exit,Выход,退出
-menu.language,Language,Язык,语言
-menu.help,Help,Справка,帮助
-menu.help.about,About...,О программе...,关于…
-window.title,n2-param — ASAP reports,n2-param — отчёты ASAP,n2-param — ASAP 报告
-drop.hint,"Drop ASAP text files here, use the Import button on the toolbar, or File → Import",Перетащите файлы сюда или нажмите «Импорт…» на панели (меню «Файл → Импорт…»),将 ASAP 文本文件拖放至此，或单击工具栏/菜单中的「导入…」
-tab.chart_pp0_vs_vol,V = f(P/p0), V = f(P/p0),V = f(P/p0)
-tab.chart_bjh,BJH desorption,BJH десорбция,BJH 脱附
-tab.statistics,Statistics,Статистика,统计
-tab.raw,Raw text,Текст файла,原始文本
-chart.analysis_log.title,Adsorbed volume vs. relative pressure,Объём адсорбции в зависимости от относительного давления,吸附体积随相对压力
-chart.bjh.title,"BJH desorption — dV/dD vs. pore diameter",BJH (десорбция) — dV/dD от размера пор,BJH 脱附 dV/dD
-stats.placeholder,Statistics will be defined in stage 2.,Содержимое вкладки будет задано на этапе 2.,统计内容将在阶段 2 中定义。
-raw.allow_edit,Allow editing,Разрешить редактирование,允许编辑
-raw.save,Save,Сохранить,保存
-raw.unsaved,Unsaved changes,Есть несохранённые изменения,有未保存的更改
-about.title,About n2-param,О программе n2-param,关于 n2-param
-about.body,"Developer: configure contacts in about_info.py","Разработчик: задайте контакты в about_info.py","开发者：请在 about_info.py 中填写联系方式"
-dialog.save_failed,Could not save file.,Не удалось сохранить файл.,无法保存文件。
-axis.relative_pressure,Relative pressure,Относительное давление,相对压力
-axis.pressure_mmhg,Pressure (mmHg),Давление (мм рт. ст.),压力（mmHg）
-axis.vol_adsorbed,Vol adsorbed (cc/g STP),Объём адсорбции (см³/г STP),吸附体积（cc/g STP）
-axis.avg_diameter,Average diameter (Å),Средний диаметр (Å),平均孔径（Å）
-axis.incr_area,Incremental pore area (m²/g),Инкрементальная площадь пор (м²/г),增量孔面积（m²/g）
-axis.cum_area,Cumulative pore area (m²/g),Кумулятивная площадь пор (м²/г),累计孔面积（m²/g）
-axis.incr_vol,Incremental pore volume (cc/g),Инкрементальный объём пор (см³/г),增量孔体积（cc/g）
-axis.cum_vol,Cumulative pore volume (cc/g),Кумулятивный объём пор (см³/г),累计孔体积（cc/g）
-axis.pore_diameter_nm,"Pore diameter, D (nm)",«Диаметр пор, D (нм)»,孔径 D（nm）
-axis.dV_dD,"dV/dD (cm³·g⁻¹·nm⁻¹)",«dV/dD, см³·г⁻¹·нм⁻¹»,dV/dD（cm³·g⁻¹·nm⁻¹）
-figure_options.dialog_title,Figure options,Параметры рисунка,图窗选项
-figure_options.error_title,Error,Ошибка,错误
-figure_options.error_no_axes,There are no Axes to edit.,Нет осей для редактирования.,没有可编辑的坐标轴
-figure_options.customize,Customize,Настройка,自定义
-figure_options.select_axes,Select Axes:,Выберите ось:,选择坐标轴：
-figure_options.tab_axes,Axes,Оси,轴
-figure_options.tab_curves,Curves,Кривые,曲线
-figure_options.tab_curves_comment,"On single-file charts the default is point (.) markers, size 6; change in Marker below. Summary charts use lines only.","Для графиков отдельных файлов по умолчанию — маркер «точка» (.) размера 6; стиль и размер меняются в блоке «Маркер» ниже. Во «Сводке» — только линии.","单文件图默认用点 (.) 标记、大小 6，可在下方「标记」中修改。汇总图仅线、无标记。"
-figure_options.tab_mappables,"Images, etc.","Изображения и проч.","图像等"
-figure_options.field_figure_title,Title,Заголовок,标题
-figure_options.field_min,Min,Мин.,最小
-figure_options.field_max,Max,Макс.,最大
-figure_options.field_label,Label,Подпись,标签
-figure_options.field_scale,Scale,Шкала,比例
-figure_options.axis_section_x,"<b>X-Axis</b>","<b>Ось X</b>","<b>X 轴</b>"
-figure_options.axis_section_y,"<b>Y-Axis</b>","<b>Ось Y</b>","<b>Y 轴</b>"
-figure_options.axis_section_z,"<b>Z-Axis</b>","<b>Ось Z</b>","<b>Z 轴</b>"
-figure_options.regenerate_legend,"(Re-)Generate automatic legend","(Пере)создать легенду",（重新）生成图例
-figure_options.ls_solid,Solid,Сплошная,实线
-figure_options.ls_dashed,Dashed,Штриховая,虚线
-figure_options.ls_dashdot,Dash-Dot,Штрих-пунктир,点划线
-figure_options.ls_dotted,Dotted,Пунктирная,点线
-figure_options.ls_none,None,Нет,无
-figure_options.draw_default,Default,По умолчанию,默认
-figure_options.draw_steps_pre,Steps (Pre),Ступени (нач.),阶梯（前）
-figure_options.draw_steps_mid,Steps (Mid),Ступени (сер.),阶梯（中）
-figure_options.draw_steps_post,Steps (Post),Ступени (кон.),阶梯（后）
-figure_options.section_line_html,"<b>Line</b>","<b>Линия</b>","<b>线</b>"
-figure_options.field_line_style,Line style,Стиль линии,线型
-figure_options.field_draw_style,Draw style,Тип рисования,绘制方式
-figure_options.field_width,Width,Толщина,线宽
-figure_options.field_color_rgba,Color (RGBA),Цвет (RGBA),颜色 (RGBA)
-figure_options.section_marker_html,"<b>Marker</b>","<b>Маркер</b>","<b>标记</b>"
-figure_options.field_style,Style,Стиль,样式
-figure_options.field_size,Size,Размер,大小
-figure_options.field_face_color_rgba,Face color (RGBA),Цвет заливки (RGBA),面颜色 (RGBA)
-figure_options.field_edge_color_rgba,Edge color (RGBA),Цвет контура (RGBA),边颜色 (RGBA)
-figure_options.field_colormap,Colormap,Цветовая карта,色图
-figure_options.field_min_value,Min. value,Мин. значение,最小值
-figure_options.field_max_value,Max. value,Макс. значение,最大值
-figure_options.field_interpolation,Interpolation,Интерполяция,插值
-figure_options.field_interpolation_stage,Interpolation stage,Этап интерполяции,插值阶段
+key :: en :: ru :: cn
+tab.summary :: Summary :: Сводка :: 汇总
+summary.file_list_title :: Files :: Файлы :: 文件
+menu.file :: File :: Файл :: 文件
+menu.file.open :: Import... :: Импорт… :: 导入…
+menu.file.exit :: Exit :: Выход :: 退出
+menu.language :: Language :: Язык :: 语言
+menu.help :: Help :: Справка :: 帮助
+menu.help.about :: About... :: О программе... :: 关于…
+window.title :: n2-param — ASAP reports :: n2-param — отчёты ASAP :: n2-param — ASAP 报告
+drop.hint :: Drop ASAP text files here, use the Import button on the toolbar, or File → Import :: Перетащите файлы сюда или нажмите «Импорт…» на панели (меню «Файл → Импорт…») :: 将 ASAP 文本文件拖放至此，或单击工具栏/菜单中的「导入…」
+tab.chart_pp0_vs_vol :: V = f(P/p0) :: V = f(P/p0) :: V = f(P/p0)
+tab.chart_bjh :: BJH desorption :: BJH десорбция :: BJH 脱附
+tab.statistics :: Statistics :: Статистика :: 统计
+tab.raw :: Raw text :: Текст файла :: 原始文本
+chart.analysis_log.title :: Adsorbed volume vs. relative pressure :: Объём адсорбции в зависимости от относительного давления :: 吸附体积随相对压力
+chart.bjh.title :: BJH desorption — dV/dD vs. pore diameter :: BJH (десорбция) — dV/dD от размера пор :: BJH 脱附 dV/dD
+stats.placeholder :: Statistics will be defined in stage 2. :: Содержимое вкладки будет задано на этапе 2. :: 统计内容将在阶段 2 中定义。
+raw.allow_edit :: Allow editing :: Разрешить редактирование :: 允许编辑
+raw.save :: Save :: Сохранить :: 保存
+raw.unsaved :: Unsaved changes :: Есть несохранённые изменения :: 有未保存的更改
+about.title :: About n2-param :: О программе n2-param :: 关于 n2-param
+about.body :: Developer: configure contacts in about_info.py :: Разработчик: задайте контакты в about_info.py :: 开发者：请在 about_info.py 中填写联系方式
+dialog.save_failed :: Could not save file. :: Не удалось сохранить файл. :: 无法保存文件。
+axis.relative_pressure :: Relative pressure :: Относительное давление :: 相对压力
+axis.pressure_mmhg :: Pressure (mmHg) :: Давление (мм рт. ст.) :: 压力（mmHg）
+axis.vol_adsorbed :: Vol adsorbed (cc/g STP) :: Объём адсорбции (см³/г STP) :: 吸附体积（cc/g STP）
+axis.avg_diameter :: Average diameter (Å) :: Средний диаметр (Å) :: 平均孔径（Å）
+axis.incr_area :: Incremental pore area (m²/g) :: Инкрементальная площадь пор (м²/г) :: 增量孔面积（m²/g）
+axis.cum_area :: Cumulative pore area (m²/g) :: Кумулятивная площадь пор (м²/г) :: 累计孔面积（m²/g）
+axis.incr_vol :: Incremental pore volume (cc/g) :: Инкрементальный объём пор (см³/г) :: 增量孔体积（cc/g）
+axis.cum_vol :: Cumulative pore volume (cc/g) :: Кумулятивный объём пор (см³/г) :: 累计孔体积（cc/g）
+axis.pore_diameter_nm :: Pore diameter, nm :: Диаметр пор, нм :: 孔径，nm
+axis.dV_dD :: dV/dD, cm³/(nm·g) :: dV/dD, см³/(нм·г) :: dV/dD，cm³/（nm·g）
+figure_options.dialog_title :: Figure options :: Параметры рисунка :: 图窗选项
+figure_options.error_title :: Error :: Ошибка :: 错误
+figure_options.error_no_axes :: There are no Axes to edit. :: Нет осей для редактирования. :: 没有可编辑的坐标轴
+figure_options.customize :: Customize :: Настройка :: 自定义
+figure_options.select_axes :: Select Axes: :: Выберите ось: :: 选择坐标轴：
+figure_options.tab_axes :: Axes :: Оси :: 轴
+figure_options.tab_curves :: Curves :: Кривые :: 曲线
+figure_options.tab_curves_comment :: On single-file charts the default is point (.) markers, size 6; change in Marker below. Summary charts use lines only. :: Для графиков отдельных файлов по умолчанию — маркер «точка» (.) размера 6; стиль и размер меняются в блоке «Маркер» ниже. Во «Сводке» — только линии. :: 单文件图默认用点 (.) 标记、大小 6，可在下方「标记」中修改。汇总图仅线、无标记。
+figure_options.tab_mappables :: Images, etc. :: Изображения и проч. :: 图像等
+figure_options.field_figure_title :: Title :: Заголовок :: 标题
+figure_options.field_min :: Min :: Мин. :: 最小
+figure_options.field_max :: Max :: Макс. :: 最大
+figure_options.field_label :: Label :: Подпись :: 标签
+figure_options.field_scale :: Scale :: Шкала :: 比例
+figure_options.axis_section_x :: <b>X-Axis</b> :: <b>Ось X</b> :: <b>X 轴</b>
+figure_options.axis_section_y :: <b>Y-Axis</b> :: <b>Ось Y</b> :: <b>Y 轴</b>
+figure_options.axis_section_z :: <b>Z-Axis</b> :: <b>Ось Z</b> :: <b>Z 轴</b>
+figure_options.regenerate_legend :: (Re-)Generate automatic legend :: (Пере)создать легенду :: （重新）生成图例
+figure_options.ls_solid :: Solid :: Сплошная :: 实线
+figure_options.ls_dashed :: Dashed :: Штриховая :: 虚线
+figure_options.ls_dashdot :: Dash-Dot :: Штрих-пунктир :: 点划线
+figure_options.ls_dotted :: Dotted :: Пунктирная :: 点线
+figure_options.ls_none :: None :: Нет :: 无
+figure_options.draw_default :: Default :: По умолчанию :: 默认
+figure_options.draw_steps_pre :: Steps (Pre) :: Ступени (нач.) :: 阶梯（前）
+figure_options.draw_steps_mid :: Steps (Mid) :: Ступени (сер.) :: 阶梯（中）
+figure_options.draw_steps_post :: Steps (Post) :: Ступени (кон.) :: 阶梯（后）
+figure_options.section_line_html :: <b>Line</b> :: <b>Линия</b> :: <b>线</b>
+figure_options.field_line_style :: Line style :: Стиль линии :: 线型
+figure_options.field_draw_style :: Draw style :: Тип рисования :: 绘制方式
+figure_options.field_width :: Width :: Толщина :: 线宽
+figure_options.field_color_rgba :: Color (RGBA) :: Цвет (RGBA) :: 颜色 (RGBA)
+figure_options.section_marker_html :: <b>Marker</b> :: <b>Маркер</b> :: <b>标记</b>
+figure_options.field_style :: Style :: Стиль :: 样式
+figure_options.field_size :: Size :: Размер :: 大小
+figure_options.field_face_color_rgba :: Face color (RGBA) :: Цвет заливки (RGBA) :: 面颜色 (RGBA)
+figure_options.field_edge_color_rgba :: Edge color (RGBA) :: Цвет контура (RGBA) :: 边颜色 (RGBA)
+figure_options.field_colormap :: Colormap :: Цветовая карта :: 色图
+figure_options.field_min_value :: Min. value :: Мин. значение :: 最小值
+figure_options.field_max_value :: Max. value :: Макс. значение :: 最大值
+figure_options.field_interpolation :: Interpolation :: Интерполяция :: 插值
+figure_options.field_interpolation_stage :: Interpolation stage :: Этап интерполяции :: 插值阶段
