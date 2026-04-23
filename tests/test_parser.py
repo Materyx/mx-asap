@@ -1,5 +1,5 @@
 """
-Regression tests for ASAP parsing across bundled sample exports.
+Regression tests for ASAP parsing using synthetic public-safe sample exports.
 """
 
 from __future__ import annotations
@@ -17,6 +17,7 @@ from source.core.parsing.asap_report_parser import (
 from source.gui.chart_series import bjh_dVdD_cc_g_nm
 
 _SAMPLES_DIR = Path(__file__).resolve().parents[1] / "samples"
+_MERGED = "synthetic-asap-merged.001"
 
 
 def _legacy_first_segment_analysis_log_row_count(text: str) -> int:
@@ -43,13 +44,8 @@ def _legacy_first_segment_analysis_log_row_count(text: str) -> int:
 @pytest.mark.parametrize(
     "filename",
     [
-        "Cs-Zn-NaOH.003",
-        "C-Zn-AHC.394",
-        "Cs-Zn-AHC.004",
-        "Cs-Zn-AHC-Am.002",
-        "C-Zn-NaOH.393",
-        "C-Zn-Com.391",
-        "C-Zn-AHC-Am.392",
+        _MERGED,
+        "synthetic-asap-alt.002",
     ],
 )
 def test_parse_samples_parse_without_fatal_errors(filename: str) -> None:
@@ -65,20 +61,20 @@ def test_parse_samples_parse_without_fatal_errors(filename: str) -> None:
     assert report.summary.bjh_desorption_average_pore_diameter_a is not None
 
 
-def test_c_zn_ahc_394_merges_analysis_log_across_pages() -> None:
+def test_synthetic_merged_log_spans_pages() -> None:
     """Multi-page ANALYSIS LOG continuations must append after the page break."""
-    path = _SAMPLES_DIR / "C-Zn-AHC.394"
+    path = _SAMPLES_DIR / _MERGED
     text = path.read_text(encoding="utf-8", errors="replace")
     report = AsapReportParser().parse(text)
     legacy_first_only = _legacy_first_segment_analysis_log_row_count(text)
     assert legacy_first_only > 0
     assert len(report.analysis_log) > legacy_first_only
-    assert len(report.analysis_log) == 47
+    assert len(report.analysis_log) == 14
 
 
-def test_bjh_dVdD_formulasample_row() -> None:
-    """dV/dD = (A * 10) / (B - C) with A incremental volume, C_min–B_max from range (Å)."""
-    path = _SAMPLES_DIR / "C-Zn-AHC-Am.392"
+def test_bjh_dVdD_formula_row() -> None:
+    """dV/dD = (A * 10) / (B - C) with A incremental volume, C_min and B_max from range (Å)."""
+    path = _SAMPLES_DIR / _MERGED
     text = path.read_text(encoding="utf-8", errors="replace")
     report = AsapReportParser().parse(text)
     assert len(report.bjh_desorption_rows) >= 2
@@ -89,12 +85,12 @@ def test_bjh_dVdD_formulasample_row() -> None:
     assert bjh_dVdD_cc_g_nm(row1) == pytest.approx(expect, rel=1e-5)
 
 
-def test_cs_zn_naoh_numeric_snapshot() -> None:
-    """Spot-check known values from Cs-Zn-NaOH.003."""
-    path = _SAMPLES_DIR / "Cs-Zn-NaOH.003"
+def test_synthetic_merged_summary_snapshot() -> None:
+    """Spot-check summary metrics from the merged synthetic file."""
+    path = _SAMPLES_DIR / _MERGED
     text = path.read_text(encoding="utf-8", errors="replace")
     report = AsapReportParser().parse(text)
-    assert report.sample_id == "Sc-66-2, Vaschenkov"
-    assert report.summary.bjh_cumulative_desorption_surface_area_sq_m_g == pytest.approx(23.3907)
-    assert report.summary.bjh_cumulative_desorption_pore_volume_cc_g == pytest.approx(0.091648)
-    assert report.summary.bjh_desorption_average_pore_diameter_a == pytest.approx(156.7253)
+    assert report.sample_id == "Demo-01, Lab Specimen"
+    assert report.summary.bjh_cumulative_desorption_surface_area_sq_m_g == pytest.approx(12.5)
+    assert report.summary.bjh_cumulative_desorption_pore_volume_cc_g == pytest.approx(0.1)
+    assert report.summary.bjh_desorption_average_pore_diameter_a == pytest.approx(50.0)

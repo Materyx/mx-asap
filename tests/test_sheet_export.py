@@ -64,7 +64,7 @@ def test_merge_different_row_heights() -> None:
 
 
 def test_build_sheet_row_shape() -> None:
-    path = Path(__file__).resolve().parents[1] / "samples" / "C-Zn-AHC.394"
+    path = Path(__file__).resolve().parents[1] / "samples" / "synthetic-asap-merged.001"
     text = path.read_text(encoding="utf-8", errors="replace")
     report = AsapReportParser().parse(text)
     name = "TestSample"
@@ -74,7 +74,7 @@ def test_build_sheet_row_shape() -> None:
 
 
 def test_bjh_dvd_matches_series_fn() -> None:
-    path = Path(__file__).resolve().parents[1] / "samples" / "C-Zn-AHC.394"
+    path = Path(__file__).resolve().parents[1] / "samples" / "synthetic-asap-merged.001"
     text = path.read_text(encoding="utf-8", errors="replace")
     report = AsapReportParser().parse(text)
     r0 = report.bjh_desorption_rows[0]
@@ -85,7 +85,7 @@ def test_bjh_dvd_matches_series_fn() -> None:
 
 
 def test_export_parsed_rejects_wrong_ext(tmp_path: Path) -> None:
-    path = Path(__file__).resolve().parents[1] / "samples" / "C-Zn-AHC.394"
+    path = Path(__file__).resolve().parents[1] / "samples" / "synthetic-asap-merged.001"
     text = path.read_text(encoding="utf-8", errors="replace")
     report = AsapReportParser().parse(text)
     bad = tmp_path / "out.txt"
