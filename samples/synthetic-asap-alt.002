@@ -1,0 +1,91 @@
+                      Micromeritics Instrument Corporation
+   ASAP 2400 V3.07                                                    PAGE  1
+
+   SAMPLE DIRECTORY/NUMBER: LABSYN   /002               START 12:00:00 02/01/30
+   SAMPLE ID: Demo-02, Alt Control                      COMPL 12:00:00 02/01/30
+   SUBMITTER:                                           REPRT 12:00:00 02/01/30
+   OPERATOR:                                            SAMPLE WT:    2.0000 g
+   STATION NUMBER: 1      EQUIL INTERVAL:   20 sec   FREE SPACE:  18.0000 cc
+
+                                  ANALYSIS LOG
+
+      RELATIVE    PRESSURE    VOL ADSORBED    ELAPSED TIME     SATURATION
+      PRESSURE     (mmHg)      (cc/g STP)       (HR:MN)       PRESS.(mmHg)
+
+       0.0500       35.000         5.0000         0:10
+       0.1000       70.000         6.0000         0:20
+       0.2000      130.000         7.0000         0:30
+       0.4000      250.000         8.0000         0:40
+                      Micromeritics Instrument Corporation
+   ASAP 2400 V3.07                                                    PAGE  2
+
+   SAMPLE DIRECTORY/NUMBER: LABSYN   /002               START 12:00:00 02/01/30
+   SAMPLE ID: Demo-02, Alt Control                      COMPL 12:00:00 02/01/30
+   SUBMITTER:                                           REPRT 12:00:00 02/01/30
+   OPERATOR:                                            SAMPLE WT:    2.0000 g
+   STATION NUMBER: 1      EQUIL INTERVAL:   20 sec   FREE SPACE:  18.0000 cc
+
+                     BJH ADSORPTION PORE DISTRIBUTION REPORT
+
+    PORE DIAMETER    AVERAGE   INCREMENTAL CUMULATIVE  INCREMENTAL CUMULATIVE
+        RANGE        DIAMETER  PORE VOLUME PORE VOLUME  PORE AREA   PORE AREA
+         (A )          (A )      (cc/g)      (cc/g)     (sq. m/g)   (sq. m/g)
+
+     50.0-   20.0      35.0     0.001000    0.001000     0.1       0.1
+                      Micromeritics Instrument Corporation
+   ASAP 2400 V3.07                                                    PAGE  3
+
+   SAMPLE DIRECTORY/NUMBER: LABSYN   /002               START 12:00:00 02/01/30
+   SAMPLE ID: Demo-02, Alt Control                      COMPL 12:00:00 02/01/30
+   SUBMITTER:                                           REPRT 12:00:00 02/01/30
+   OPERATOR:                                            SAMPLE WT:    2.0000 g
+   STATION NUMBER: 1      EQUIL INTERVAL:   20 sec   FREE SPACE:  18.0000 cc
+
+                     BJH DESORPTION PORE DISTRIBUTION REPORT
+
+    PORE DIAMETER    AVERAGE   INCREMENTAL CUMULATIVE  INCREMENTAL CUMULATIVE
+        RANGE        DIAMETER  PORE VOLUME PORE VOLUME  PORE AREA   PORE AREA
+         (A )          (A )      (cc/g)      (cc/g)     (sq. m/g)   (sq. m/g)
+
+     80.0-   40.0      60.0     0.020000    0.020000     0.2       0.2
+     30.0-   20.0      25.0     0.001500    0.021500     0.3       0.3
+                      Micromeritics Instrument Corporation
+   ASAP 2400 V3.07                                                    PAGE  4
+
+   SAMPLE DIRECTORY/NUMBER: LABSYN   /002               START 12:00:00 02/01/30
+   SAMPLE ID: Demo-02, Alt Control                      COMPL 12:00:00 02/01/30
+   SUBMITTER:                                           REPRT 12:00:00 02/01/30
+   OPERATOR:                                            SAMPLE WT:    2.0000 g
+   STATION NUMBER: 1      EQUIL INTERVAL:   20 sec   FREE SPACE:  18.0000 cc
+
+                                SUMMARY REPORT
+
+                                     AREA
+
+   BET SURFACE AREA:                                         10.0000   sq. m/g
+
+   BJH CUMULATIVE ADSORPTION SURFACE AREA OF PORES
+    BETWEEN     10.0000 AND   1000.0000 A  DIAMETER:         0.5   sq. m/g
+
+   BJH CUMULATIVE DESORPTION SURFACE AREA OF PORES
+    BETWEEN     10.0000 AND   1000.0000 A  DIAMETER:         20.0000   sq. m/g
+
+   MICROPORE AREA:                                            0.5   sq. m/g
+
+                                    VOLUME
+
+   BJH CUMULATIVE ADSORPTION PORE VOLUME OF PORES
+    BETWEEN     10.0000 AND   1000.0000 A  DIAMETER:         0.200000 cc/g
+
+   BJH CUMULATIVE DESORPTION PORE VOLUME OF PORES
+    BETWEEN     10.0000 AND   1000.0000 A  DIAMETER:         0.200000 cc/g
+
+   MICROPORE VOLUME:                                        0.000200 cc/g
+
+                                  PORE SIZE
+
+   AVERAGE PORE DIAMETER (4V/A BY BET):                    100.0000   A
+
+   BJH ADSORPTION AVERAGE PORE DIAMETER (4V/A):              40.0000   A
+
+   BJH DESORPTION AVERAGE PORE DIAMETER (4V/A):             60.0000   A

@@ -214,5 +214,7 @@ __marimo__/
 # MacOS
 .DS_Store
 
-# Samples
-samples/
+# Samples: proprietary data stays untracked; only public synthetic fixtures are committed
+samples/*
+!samples/synthetic-asap-merged.001
+!samples/synthetic-asap-alt.002
