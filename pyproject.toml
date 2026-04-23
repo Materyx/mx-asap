@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "n2-param"
+version = "0.1.0"
+description = "Cross-platform GUI for Micromeritics ASAP text reports"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "matplotlib>=3.8",
+  "PySide6>=6.6",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+n2-param-gui = "n2_param.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["n2_param*"]
+
+[tool.setuptools.package-data]
+"n2_param.resources" = ["*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

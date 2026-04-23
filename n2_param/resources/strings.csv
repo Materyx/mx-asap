@@ -1,0 +1,30 @@
+key,en,ru,cn
+menu.file,File,Файл,文件
+menu.file.open,Open...,Открыть...,打开…
+menu.file.exit,Exit,Выход,退出
+menu.language,Language,Язык,语言
+menu.help,Help,Справка,帮助
+menu.help.about,About...,О программе...,关于…
+window.title,n2-param — ASAP reports,n2-param — отчёты ASAP,n2-param — ASAP 报告
+drop.hint,"Drop ASAP text files here, use the Open button on the toolbar, or File → Open",Перетащите файлы сюда или нажмите «Открыть» на панели (меню «Файл → Открыть…»),将 ASAP 文本文件拖放至此，或单击工具栏/菜单中的「打开…」
+tab.chart_isotherm,Isotherm,Изотерма,等温线
+tab.chart_bjh,BJH desorption,BJH десорбция,BJH 脱附
+tab.statistics,Statistics,Статистика,统计
+tab.raw,Raw text,Текст файла,原始文本
+chart.isotherm.title,Isotherm (first ANALYSIS LOG),Изотерма (первый ANALYSIS LOG),等温线（首个 ANALYSIS LOG）
+chart.bjh.title,BJH desorption pore distribution,Распределение пор BJH (десорбция),BJH 脱附孔分布
+stats.placeholder,Statistics will be defined in stage 2.,Содержимое вкладки будет задано на этапе 2.,统计内容将在阶段 2 中定义。
+raw.allow_edit,Allow editing,Разрешить редактирование,允许编辑
+raw.save,Save,Сохранить,保存
+raw.unsaved,Unsaved changes,Есть несохранённые изменения,有未保存的更改
+about.title,About n2-param,О программе n2-param,关于 n2-param
+about.body,"Developer: configure contacts in about_info.py","Разработчик: задайте контакты в about_info.py","开发者：请在 about_info.py 中填写联系方式"
+dialog.save_failed,Could not save file.,Не удалось сохранить файл.,无法保存文件。
+axis.relative_pressure,Relative pressure,Относительное давление,相对压力
+axis.pressure_mmhg,Pressure (mmHg),Давление (мм рт. ст.),压力（mmHg）
+axis.vol_adsorbed,Vol adsorbed (cc/g STP),Объём адсорбции (см³/г STP),吸附体积（cc/g STP）
+axis.avg_diameter,Average diameter (Å),Средний диаметр (Å),平均孔径（Å）
+axis.incr_area,Incremental pore area (m²/g),Инкрементальная площадь пор (м²/г),增量孔面积（m²/g）
+axis.cum_area,Cumulative pore area (m²/g),Кумулятивная площадь пор (м²/г),累计孔面积（m²/g）
+axis.incr_vol,Incremental pore volume (cc/g),Инкрементальный объём пор (см³/г),增量孔体积（cc/g）
+axis.cum_vol,Cumulative pore volume (cc/g),Кумулятивный объём пор (см³/г),累计孔体积（cc/g）
