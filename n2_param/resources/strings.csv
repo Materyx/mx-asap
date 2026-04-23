@@ -39,6 +39,7 @@ figure_options.customize,Customize,Настройка,自定义
 figure_options.select_axes,Select Axes:,Выберите ось:,选择坐标轴：
 figure_options.tab_axes,Axes,Оси,轴
 figure_options.tab_curves,Curves,Кривые,曲线
+figure_options.tab_curves_comment,"On single-file charts the default is point (.) markers, size 6; change in Marker below. Summary charts use lines only.","Для графиков отдельных файлов по умолчанию — маркер «точка» (.) размера 6; стиль и размер меняются в блоке «Маркер» ниже. Во «Сводке» — только линии.","单文件图默认用点 (.) 标记、大小 6，可在下方「标记」中修改。汇总图仅线、无标记。"
 figure_options.tab_mappables,"Images, etc.","Изображения и проч.","图像等"
 figure_options.field_figure_title,Title,Заголовок,标题
 figure_options.field_min,Min,Мин.,最小

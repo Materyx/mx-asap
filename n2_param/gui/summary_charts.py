@@ -216,6 +216,7 @@ class MultiAnalysisLogChartWidget(QWidget):
                 linewidth=_LINE_W,
                 visible=self._visible(path),
                 label=lbl,
+                marker=None,
             )
             line.set_gid(_curve_gid_for_path(path))
             self._lines[path] = line
@@ -359,6 +360,7 @@ class MultiBjhChartWidget(QWidget):
                 linewidth=_LINE_W,
                 visible=self._visible(path),
                 label=lbl,
+                marker=None,
             )
             line.set_gid(_curve_gid_for_path(path))
             self._lines[path] = line

@@ -181,9 +181,10 @@ def figure_edit(axes, parent, tr: Tr) -> None:
     tab_axes = tr("figure_options.tab_axes")
     tab_curves = tr("figure_options.tab_curves")
     tab_mappables = tr("figure_options.tab_mappables")
+    curves_tab_comment = tr("figure_options.tab_curves_comment")
     datalist: list = [(general, tab_axes, "")]
     if curves:
-        datalist.append((curves, tab_curves, ""))
+        datalist.append((curves, tab_curves, curves_tab_comment))
     if mappables:
         datalist.append((mappables, tab_mappables, ""))
 

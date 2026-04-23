@@ -12,13 +12,15 @@ from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
 from n2_param.gui.chart_config import (
     AnalysisLogField,
+    SINGLE_CHART_DEFAULT_MARKER,
+    SINGLE_CHART_DEFAULT_MARKERSIZE,
     X_ANALYSIS_LOG_PLOT_DEFAULT,
     Y_ANALYSIS_LOG_PLOT_DEFAULT,
 )
 from n2_param.gui.chart_series import analysis_series
+from n2_param.gui.file_session import OpenFileSession
 from n2_param.gui.mpl_navigation_toolbar import N2ParamNavigationToolbar2QT
 from n2_param.gui.mpl_util import bind_figure_size_to_canvas
-from n2_param.gui.file_session import OpenFileSession
 from n2_param.i18n.translator import Translator
 
 logger = logging.getLogger(__name__)
@@ -94,7 +96,15 @@ class AnalysisLogChartWidget(QWidget):
             self._canvas.draw_idle()
             return
 
-        self._axes.plot(xs, ys, color="#1f77b4", linewidth=1.5)
+        self._axes.plot(
+            xs,
+            ys,
+            color="#1f77b4",
+            linewidth=1.5,
+            marker=SINGLE_CHART_DEFAULT_MARKER,
+            markersize=SINGLE_CHART_DEFAULT_MARKERSIZE,
+            label=self._session.display_title(),
+        )
         self._axes.set_xlabel(self._axis_label(self._x_field))
         self._axes.set_ylabel(self._axis_label(self._y_field))
         self._axes.grid(True, linestyle="--", linewidth=0.5, alpha=0.6)

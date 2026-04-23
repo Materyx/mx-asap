@@ -2,6 +2,9 @@
 Configurable axis mappings for matplotlib views.
 
 Defaults follow the ASAP workflow requested for stage 1 and can be swapped later.
+
+Per-file charts use a default Matplotlib "point" marker and size; Summary overlays use
+lines without markers.
 """
 
 from __future__ import annotations
@@ -31,3 +34,7 @@ Y_ANALYSIS_LOG_PLOT_DEFAULT: AnalysisLogField = "vol_adsorbed_cc_g_stp"
 # BJH: X = average diameter (nm), Y = dV/dD in cm³·g⁻¹·nm⁻¹; see chart_series.bjh_series.
 XBJH_DEFAULT: BJHSeries = "pore_diameter_avg_nm"
 YBJH_DEFAULT: BJHSeries = "dV_dD_cc_g_nm"
+
+# Per-file (non-Summary) matplotlib Line2D defaults: Matplotlib «point» marker, editable in Figure options.
+SINGLE_CHART_DEFAULT_MARKER: str = "."
+SINGLE_CHART_DEFAULT_MARKERSIZE: float = 6.0
