@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from PySide6.QtCore import Qt, QTimer
-from PySide6.QtGui import QColor, QShowEvent
+from PySide6.QtGui import QColor, QFontMetrics, QShowEvent
 from PySide6.QtWidgets import (
     QCheckBox,
     QColorDialog,
@@ -35,6 +35,29 @@ logger = logging.getLogger(__name__)
 # Swatch (color) button: compact size for a single list row; layout aligns it with the checkbox and label.
 _SWATCH_W: int = 16
 _SWATCH_H: int = 14
+# Extra room for QGroupBox frame, scroll area chrome, and comfortable padding; do not under-estimate.
+_LEFT_PANEL_OUTER_SLACK_PX: int = 48
+# Minimum width to leave for the chart area on the right when apportioning the splitter.
+_CHART_MIN_RESERVE_PX: int = 100
+
+
+def _qlabel_text_minimum_width(name: QLabel, text: str) -> int:
+    """
+    Return a minimum width (logical pixels) so a single-line label can show the full string.
+
+    Parameters:
+        name: The label whose font metrics are used.
+        text: The string the label is expected to show.
+
+    Returns:
+        Non-negative width, including a small margin for kerning and rounding.
+    """
+    if not text:
+        return 0
+    if not isinstance(text, str):
+        raise TypeError("text must be str")
+    fm = QFontMetrics(name.font())
+    return int(fm.horizontalAdvance(text)) + 14
 
 
 @dataclass(frozen=True, slots=True)
@@ -122,7 +145,9 @@ class SummaryTabPage(QWidget):
     def showEvent(self, event: QShowEvent) -> None:
         """Tie left-panel width to content the first time the page is shown."""
         super().showEvent(event)
+        # First frame: splitter/outer layout may not have final size yet; repeat after layout.
         QTimer.singleShot(0, self._tune_left_panel_to_content)
+        QTimer.singleShot(50, self._tune_left_panel_to_content)
 
     def set_sessions(self, sessions: Sequence[OpenFileSession]) -> None:
         """
@@ -211,7 +236,9 @@ class SummaryTabPage(QWidget):
         )
 
         name = QLabel(row_widget)
-        name.setText(session.display_title())
+        title = session.display_title()
+        name.setText(title)
+        name.setMinimumWidth(_qlabel_text_minimum_width(name, title))
         name.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         name.setWordWrap(False)
         name.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
@@ -233,18 +260,54 @@ class SummaryTabPage(QWidget):
         Set splitter so the file list is only as wide as its content; the chart gets the rest.
 
         Recomputes the scroll's inner widget after rows change (``setWidgetResizable False``).
+        Row labels use a font-based ``minimumWidth`` so ``QGroupBox.sizeHint()`` is not
+        computed from a too-narrow scroll viewport.
         """
+        if not self._path_rows:
+            self._file_panel.setMinimumWidth(0)
         self._file_panel.updateGeometry()
         self._file_panel.adjustSize()
         self._file_scroll.updateGeometry()
+        self._file_group.updateGeometry()
         self._file_group.adjustSize()
-        w_left = self._file_group.sizeHint().width() + 12
-        w_left = max(120, min(520, w_left))
+        w_from_rows = self._preferred_left_column_width()
+        w_left = max(
+            w_from_rows,
+            int(self._file_group.sizeHint().width()) + 24,
+            200,
+        )
+        w_left = min(w_left, 1400)
         w_total = int(self._splitter.width() or 0) or (self.width() or 0) or (self.window().width() if self.window() is not None else 0) or 640
-        if w_total > 200:
-            w_left = min(w_left, w_total - 200)
-        w_right = max(400, w_total - w_left)
+        if w_total > _CHART_MIN_RESERVE_PX + 120:
+            w_left = min(w_left, w_total - _CHART_MIN_RESERVE_PX)
+        w_right = max(300, w_total - w_left)
         self._splitter.setSizes([w_left, w_right])
+
+    def _preferred_left_column_width(self) -> int:
+        """
+        Preferred splitter width (logical px) for the file list so names are not visually clipped.
+
+        Sums the widest row (checkbox, gaps, swatch, font width) and outer slack for group/scroll.
+        """
+        if not self._path_rows:
+            return 120
+        margins = self._file_list_layout.contentsMargins()
+        h_pad = int(margins.left() + margins.right())
+        gap = 5
+        widest = 0
+        for row in self._path_rows.values():
+            t = (row.name.text() or "")
+            if not t:
+                continue
+            fm = QFontMetrics(row.name.font())
+            text_w = int(fm.horizontalAdvance(t))
+            ch_w = int(row.check.sizeHint().width())
+            row_w = ch_w + gap + _SWATCH_W + gap + text_w + 12
+            if row_w > widest:
+                widest = row_w
+        if widest <= 0:
+            return 200
+        return h_pad + widest + _LEFT_PANEL_OUTER_SLACK_PX
 
     def _on_appearance_changed(self) -> None:
         """Reapply visibility and colors; Multi* keep axis limits in ``apply_appearance``."""
@@ -289,7 +352,9 @@ class SummaryTabPage(QWidget):
         for p, row in self._path_rows.items():
             for s in self._sessions:
                 if s.path == p:
-                    row.name.setText(s.display_title())
+                    t = s.display_title()
+                    row.name.setText(t)
+                    row.name.setMinimumWidth(_qlabel_text_minimum_width(row.name, t))
                     break
 
     def _make_label_slot(self, session: OpenFileSession) -> object:
@@ -298,7 +363,10 @@ class SummaryTabPage(QWidget):
         name_l = self._path_rows[p].name
 
         def on_change() -> None:
-            name_l.setText(session.display_title())
+            t = session.display_title()
+            name_l.setText(t)
+            name_l.setMinimumWidth(_qlabel_text_minimum_width(name_l, t))
+            QTimer.singleShot(0, self._tune_left_panel_to_content)
 
         return on_change
 

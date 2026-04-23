@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import logging
 
-from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg, NavigationToolbar2QT
+from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
@@ -16,6 +16,7 @@ from n2_param.gui.chart_config import (
     YISOTHERM_DEFAULT,
 )
 from n2_param.gui.chart_series import analysis_series
+from n2_param.gui.mpl_navigation_toolbar import N2ParamNavigationToolbar2QT
 from n2_param.gui.mpl_util import bind_figure_size_to_canvas
 from n2_param.gui.file_session import OpenFileSession
 from n2_param.i18n.translator import Translator
@@ -47,7 +48,11 @@ class IsothermChartWidget(QWidget):
 
         self._figure = Figure(figsize=(5.5, 4.0), layout="tight")
         self._canvas = FigureCanvasQTAgg(self._figure)
-        self._toolbar = NavigationToolbar2QT(self._canvas, self)
+        self._toolbar = N2ParamNavigationToolbar2QT(
+            self._canvas,
+            self,
+            translator=translator,
+        )
         layout.addWidget(self._toolbar)
         layout.addWidget(self._canvas, stretch=1)
         self._axes = self._figure.add_subplot(111)

@@ -12,7 +12,7 @@ import logging
 from collections.abc import Callable, Sequence
 from pathlib import Path
 
-from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg, NavigationToolbar2QT
+from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
 from matplotlib.lines import Line2D
 from PySide6.QtWidgets import QVBoxLayout, QWidget
@@ -20,6 +20,7 @@ from PySide6.QtWidgets import QVBoxLayout, QWidget
 from n2_param.gui.chart_config import BJHSeries, IsothermSeries, XBJH_DEFAULT, XISOTHERM_DEFAULT, YBJH_DEFAULT, YISOTHERM_DEFAULT
 from n2_param.gui.chart_series import analysis_series, bjh_series
 from n2_param.gui.file_session import OpenFileSession
+from n2_param.gui.mpl_navigation_toolbar import N2ParamNavigationToolbar2QT
 from n2_param.gui.mpl_util import bind_figure_size_to_canvas
 from n2_param.i18n.translator import Translator
 
@@ -103,7 +104,11 @@ class MultiIsothermChartWidget(QWidget):
         layout = QVBoxLayout(self)
         self._figure = Figure(figsize=(5.5, 4.0), layout="tight")
         self._canvas = FigureCanvasQTAgg(self._figure)
-        self._toolbar = NavigationToolbar2QT(self._canvas, self)
+        self._toolbar = N2ParamNavigationToolbar2QT(
+            self._canvas,
+            self,
+            translator=translator,
+        )
         layout.addWidget(self._toolbar)
         layout.addWidget(self._canvas, stretch=1)
         self._axes = self._figure.add_subplot(111)
@@ -238,7 +243,11 @@ class MultiBjhChartWidget(QWidget):
         layout = QVBoxLayout(self)
         self._figure = Figure(figsize=(5.5, 4.0), layout="tight")
         self._canvas = FigureCanvasQTAgg(self._figure)
-        self._toolbar = NavigationToolbar2QT(self._canvas, self)
+        self._toolbar = N2ParamNavigationToolbar2QT(
+            self._canvas,
+            self,
+            translator=translator,
+        )
         layout.addWidget(self._toolbar)
         layout.addWidget(self._canvas, stretch=1)
         self._axes = self._figure.add_subplot(111)

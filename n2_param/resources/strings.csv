@@ -30,3 +30,44 @@ axis.incr_area,Incremental pore area (m²/g),Инкрементальная пл
 axis.cum_area,Cumulative pore area (m²/g),Кумулятивная площадь пор (м²/г),累计孔面积（m²/g）
 axis.incr_vol,Incremental pore volume (cc/g),Инкрементальный объём пор (см³/г),增量孔体积（cc/g）
 axis.cum_vol,Cumulative pore volume (cc/g),Кумулятивный объём пор (см³/г),累计孔体积（cc/g）
+figure_options.dialog_title,Figure options,Параметры рисунка,图窗选项
+figure_options.error_title,Error,Ошибка,错误
+figure_options.error_no_axes,There are no Axes to edit.,Нет осей для редактирования.,没有可编辑的坐标轴
+figure_options.customize,Customize,Настройка,自定义
+figure_options.select_axes,Select Axes:,Выберите ось:,选择坐标轴：
+figure_options.tab_axes,Axes,Оси,轴
+figure_options.tab_curves,Curves,Кривые,曲线
+figure_options.tab_mappables,"Images, etc.","Изображения и проч.","图像等"
+figure_options.field_figure_title,Title,Заголовок,标题
+figure_options.field_min,Min,Мин.,最小
+figure_options.field_max,Max,Макс.,最大
+figure_options.field_label,Label,Подпись,标签
+figure_options.field_scale,Scale,Шкала,比例
+figure_options.axis_section_x,"<b>X-Axis</b>","<b>Ось X</b>","<b>X 轴</b>"
+figure_options.axis_section_y,"<b>Y-Axis</b>","<b>Ось Y</b>","<b>Y 轴</b>"
+figure_options.axis_section_z,"<b>Z-Axis</b>","<b>Ось Z</b>","<b>Z 轴</b>"
+figure_options.regenerate_legend,"(Re-)Generate automatic legend","(Пере)создать легенду",（重新）生成图例
+figure_options.ls_solid,Solid,Сплошная,实线
+figure_options.ls_dashed,Dashed,Штриховая,虚线
+figure_options.ls_dashdot,Dash-Dot,Штрих-пунктир,点划线
+figure_options.ls_dotted,Dotted,Пунктирная,点线
+figure_options.ls_none,None,Нет,无
+figure_options.draw_default,Default,По умолчанию,默认
+figure_options.draw_steps_pre,Steps (Pre),Ступени (нач.),阶梯（前）
+figure_options.draw_steps_mid,Steps (Mid),Ступени (сер.),阶梯（中）
+figure_options.draw_steps_post,Steps (Post),Ступени (кон.),阶梯（后）
+figure_options.section_line_html,"<b>Line</b>","<b>Линия</b>","<b>线</b>"
+figure_options.field_line_style,Line style,Стиль линии,线型
+figure_options.field_draw_style,Draw style,Тип рисования,绘制方式
+figure_options.field_width,Width,Толщина,线宽
+figure_options.field_color_rgba,Color (RGBA),Цвет (RGBA),颜色 (RGBA)
+figure_options.section_marker_html,"<b>Marker</b>","<b>Маркер</b>","<b>标记</b>"
+figure_options.field_style,Style,Стиль,样式
+figure_options.field_size,Size,Размер,大小
+figure_options.field_face_color_rgba,Face color (RGBA),Цвет заливки (RGBA),面颜色 (RGBA)
+figure_options.field_edge_color_rgba,Edge color (RGBA),Цвет контура (RGBA),边颜色 (RGBA)
+figure_options.field_colormap,Colormap,Цветовая карта,色图
+figure_options.field_min_value,Min. value,Мин. значение,最小值
+figure_options.field_max_value,Max. value,Макс. значение,最大值
+figure_options.field_interpolation,Interpolation,Интерполяция,插值
+figure_options.field_interpolation_stage,Interpolation stage,Этап интерполяции,插值阶段
