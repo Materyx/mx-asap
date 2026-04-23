@@ -1,0 +1,13 @@
+<svg width="64" height="64" version="1.1" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
+ <path d="m1.3229 1.32h14.287v14.288h-12.171l-2.1167-2.6458z" style="fill:#ff0000"/>
+ <path d="m1.0586 1.05v12l2.2539 2.8164h12.562v-14.816zm0.5293 0.5293h13.758v13.758h-11.779l-1.9785-2.4746z" style="color-rendering:auto;color:#000000;dominant-baseline:auto;fill:#000000;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-padding:0;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+ <path d="m4.2333 1.58v5.8208h8.4667v-5.8208z" style="fill:#ffffff"/>
+ <path d="m3.7042 1.58v6.35h9.525v-6.35h-0.52917v5.8208h-8.4667v-5.8208z" style="fill:#000000"/>
+ <path d="m5.2917 6.35h6.35v-0.52917h-6.35z" style="fill:#000000"/>
+ <path d="m5.2917 4.76h6.35v-0.52917h-6.35z" style="fill:#000000"/>
+ <path d="m5.2917 3.17h6.35v-0.52917h-6.35z" style="fill:#000000"/>
+ <path d="m3.7042 15.34v-4.7625h9.525v4.7625h-0.52917v-4.2333h-8.4667v4.2333z" style="fill:#000000"/>
+ <path d="m5.2917 15.34v-3.175h2.6458v3.175z" style="fill:#b9b9b9"/>
+ <path d="m4.2333 15.34v-4.2333h8.4667v4.2333h-4.2333v-3.7042h-3.7042v3.7042z" style="fill:#ffffff"/>
+ <path d="m4.7625 15.34v-3.7042h3.7042v3.7042h-0.52917v-3.175h-2.6458v3.175z" style="fill:#000000"/>
+</svg>

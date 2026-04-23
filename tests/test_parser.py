@@ -9,12 +9,12 @@ from pathlib import Path
 
 import pytest
 
-from n2_param.core.parsing.asap_report_parser import (
+from source.core.parsing.asap_report_parser import (
     AsapReportParser,
     _ANALYSIS_LOG_LINE,
     _DATA_ROW_RE,
 )
-from n2_param.gui.chart_series import bjh_dVdD_cc_g_nm
+from source.gui.chart_series import bjh_dVdD_cc_g_nm
 
 _SAMPLES_DIR = Path(__file__).resolve().parents[1] / "samples"
 

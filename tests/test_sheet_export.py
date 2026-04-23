@@ -9,8 +9,8 @@ from pathlib import Path
 
 import pytest
 
-from n2_param.core.parsing.asap_report_parser import AsapReportParser
-from n2_param.export.sheet_export import (
+from source.core.parsing.asap_report_parser import AsapReportParser
+from source.export.sheet_export import (
     SHEET_COLS,
     bjh_data_cells,
     build_sheet_rows,
@@ -19,7 +19,7 @@ from n2_param.export.sheet_export import (
     _format_eu_float,
     _padded_row,
 )
-from n2_param.gui.chart_series import bjh_dVdD_cc_g_nm
+from source.gui.chart_series import bjh_dVdD_cc_g_nm
 
 
 def tr_echo(key: str) -> str:

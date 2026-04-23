@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "n2-param"
+name = "mx-asap"
 version = "0.1.0"
-description = "Cross-platform GUI for Micromeritics ASAP text reports"
+description = "Materyx ASAP Analyzer — N2 sorption and ASAP text reports: analysis, export, and .mxap projects"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -20,14 +20,14 @@ dev = [
 ]
 
 [project.scripts]
-n2-param-gui = "n2_param.__main__:main"
+mx-asap = "source.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["n2_param*"]
+include = ["source*"]
 
 [tool.setuptools.package-data]
-"n2_param.resources" = ["*.csv"]
+"source.resources" = ["*.csv", "icons/*.svg"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

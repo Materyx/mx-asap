@@ -1,0 +1,135 @@
+key :: en :: ru :: cn
+tab.summary :: Summary :: Сводка :: 汇总
+summary.file_list_title :: Files :: Файлы :: 文件
+menu.file :: File :: Файл :: 文件
+menu.file.open :: Import... :: Импорт… :: 导入…
+menu.file.open_project :: Open project... :: Открыть проект… :: 打开项目…
+menu.file.save_project :: Save project... :: Сохранить проект… :: 保存项目…
+menu.file.export :: Export... :: Экспорт… :: 导出…
+menu.file.exit :: Exit :: Выход :: 退出
+menu.language :: Language :: Язык :: 语言
+menu.help :: Help :: Справка :: 帮助
+menu.help.about :: About... :: О программе... :: 关于…
+window.title :: Materyx — ASAP Analyzer :: Materyx — ASAP Analyzer :: Materyx — ASAP Analyzer
+drop.hint :: Drop ASAP files or click Import. Projects: .mxap. :: Перетащите файлы или нажмите «Импорт…». Также поддерживаются проекты: *.mxap. :: 拖入 ASAP 文件或点「导入…」。项目：.mxap.
+project.filter_mxap :: MXAP project (*.mxap) :: Проект MXAP (*.mxap) :: MXAP 项目 (*.mxap)
+project.save_failed :: Could not save the project. :: Не удалось сохранить проект. :: 无法保存项目。
+project.open_failed :: Could not open the project. :: Не удалось открыть проект. :: 无法打开项目。
+project.save_empty :: There are no open files to save in a project. :: Нет открытых файлов для сохранения в проекте. :: 没有可保存到项目中的已打开文件。
+project.open_no_files :: The project contains no data files. :: Проект не содержит файлов данных. :: 项目中没有数据文件。
+tab.chart_pp0_vs_vol :: V = f(P/p0) :: V = f(P/p0) :: V = f(P/p0)
+tab.chart_bjh :: BJH desorption :: BJH десорбция :: BJH 脱附
+tab.statistics :: Statistics :: Статистика :: 统计
+tab.raw :: Raw text :: Текст файла :: 原始文本
+chart.analysis_log.title :: Adsorbed volume vs. relative pressure :: Объём адсорбции в зависимости от относительного давления :: 吸附体积随相对压力
+chart.bjh.title :: BJH desorption — dV/dD vs. pore diameter :: BJH (десорбция) — dV/dD от размера пор :: BJH 脱附 dV/dD
+stats.placeholder :: Statistics will be defined in stage 2. :: Содержимое вкладки будет задано на этапе 2. :: 统计内容将在阶段 2 中定义。
+raw.allow_edit :: Allow editing :: Разрешить редактирование :: 允许编辑
+raw.save :: Save :: Сохранить :: 保存
+raw.unsaved :: Unsaved changes :: Есть несохранённые изменения :: 有未保存的更改
+about.title :: About Materyx ASAP Analyzer :: О программе Materyx ASAP Analyzer :: 关于 Materyx ASAP Analyzer
+about.p1 :: Materyx ASAP Analyzer is for analyzing, visualizing, and converting data from plain-text reports of N₂ sorption and related measurements. :: Materyx ASAP Analyzer — анализ, визуализация и конвертация данных из текстовых отчётов по N₂-адсорбции и смежным измерениям. :: Materyx ASAP Analyzer 用于对 N₂ 吸附等测量的纯文本报告进行分析、查看与数据转换。
+about.p2 :: The app opens text exports in the Micromeritics® ASAP format, as well as .mxap project files. :: Поддерживается открытие отчётов Micromeritics® ASAP и многофайловых проектов .mxap. :: 可打开 Micromeritics® ASAP 纯文本报告，以及 .mxap 多文件项目。
+about.p3 :: The software is provided as is, with no express or implied warranty, including merchantability, fitness for a particular purpose, or non-infringement. The authors are not responsible for the accuracy of results, exports, or subsequent use. :: ПО предоставляется «как есть», без каких-либо гарантий, явных и подразумеваемых, в том числе товарного состояния, пригодности и не нарушения прав. Авторы не несут ответственности за достоверность вычислений, экспорта и последующего применения данных. :: 本软件按「现状」提供，不作任何明示或默示的担保。作者对结果、导出与后续使用不作保证、亦不承担一般责任（适用法律另有规定的除外）。
+about.p4 :: Micromeritics® and ASAP are trademarks. This application is not affiliated with, sponsored by, or endorsed by Micromeritics Instrument Corporation. :: Micromeritics® и ASAP являются товарными знаками. Это приложение не связано с Micromeritics Instrument Corporation, не одобряется и не спонсируется ей. :: Micromeritics® 和 ASAP 为相关商标。本应用与 Micromeritics Instrument Corporation 无附属、赞助或认可关系。
+about.p5_lead :: Prebuilt binaries for Windows, macOS, and Linux, the source, and the license text, are found in the :: Сборки под Windows, macOS и Linux, исходный код и полный текст лицензии доступны в :: 适用于 Windows、macOS 和 Linux 的预编译程序、源码与完整许可证文本，请见
+about.p5_link :: mx-asap project on GitHub :: репозиторий mx-asap на GitHub :: 位于 GitHub 的 mx-asap 项目
+about.p5_trail :: . :: . :: 。
+about.mit_lead :: This program is open source, licensed under the :: ПО с открытым исходным кодом, на условиях :: 本软件在
+about.mit_link :: MIT License :: лицензии MIT :: MIT 许可
+about.mit_trail :: . (The full text is in the linked document.) :: (полный текст в репозитории, см. ссылку). :: 下以开源方式发布。完整许可文本见链接。
+about.line_version :: {product}, version {version} (2026) :: {product}, версия {version} (2026) :: {product}，版本 {version}（2026）
+about.line_copyright :: Copyright © 2026 Nikolai Zhivotenko, Materyx. All rights reserved. :: © Николай Животенко, Materyx, 2026. Все права защищены. :: © 2026 Nikolai Zhivotenko, Materyx。保留所有权利。
+about.contact_caption :: Contact :: Контакты :: 联系方式
+about.a_site :: website :: веб-сайт :: 网站
+about.a_issues :: Report an issue :: Сообщить о проблеме :: 反馈问题
+about.product_name :: Materyx ASAP Analyzer :: Materyx ASAP Analyzer :: Materyx ASAP Analyzer
+dialog.save_failed :: Could not save file. :: Не удалось сохранить файл. :: 无法保存文件。
+axis.relative_pressure :: Relative pressure :: Относительное давление :: 相对压力
+axis.pressure_mmhg :: Pressure (mmHg) :: Давление (мм рт. ст.) :: 压力（mmHg）
+axis.vol_adsorbed :: Vol adsorbed (cc/g STP) :: Объём адсорбции (см³/г STP) :: 吸附体积（cc/g STP）
+axis.avg_diameter :: Average diameter (Å) :: Средний диаметр (Å) :: 平均孔径（Å）
+axis.incr_area :: Incremental pore area (m²/g) :: Инкрементальная площадь пор (м²/г) :: 增量孔面积（m²/g）
+axis.cum_area :: Cumulative pore area (m²/g) :: Кумулятивная площадь пор (м²/г) :: 累计孔面积（m²/g）
+axis.incr_vol :: Incremental pore volume (cc/g) :: Инкрементальный объём пор (см³/г) :: 增量孔体积（cc/g）
+axis.cum_vol :: Cumulative pore volume (cc/g) :: Кумулятивный объём пор (см³/г) :: 累计孔体积（cc/g）
+axis.pore_diameter_nm :: Pore diameter, nm :: Диаметр пор, нм :: 孔径，nm
+axis.dV_dD :: dV/dD, cm³/(nm·g) :: dV/dD, см³/(нм·г) :: dV/dD，cm³/（nm·g）
+figure_options.dialog_title :: Figure options :: Параметры рисунка :: 图窗选项
+figure_options.error_title :: Error :: Ошибка :: 错误
+figure_options.error_no_axes :: There are no Axes to edit. :: Нет осей для редактирования. :: 没有可编辑的坐标轴
+figure_options.customize :: Customize :: Настройка :: 自定义
+figure_options.select_axes :: Select Axes: :: Выберите ось: :: 选择坐标轴：
+figure_options.tab_axes :: Axes :: Оси :: 轴
+figure_options.tab_curves :: Curves :: Кривые :: 曲线
+figure_options.tab_curves_comment :: On single-file charts the default is point (.) markers, size 6; change in Marker below. Summary charts use lines only. :: Для графиков отдельных файлов по умолчанию — маркер «точка» (.) размера 6; стиль и размер меняются в блоке «Маркер» ниже. Во «Сводке» — только линии. :: 单文件图默认用点 (.) 标记、大小 6，可在下方「标记」中修改。汇总图仅线、无标记。
+figure_options.tab_mappables :: Images, etc. :: Изображения и проч. :: 图像等
+figure_options.field_figure_title :: Title :: Заголовок :: 标题
+figure_options.field_min :: Min :: Мин. :: 最小
+figure_options.field_max :: Max :: Макс. :: 最大
+figure_options.field_label :: Label :: Подпись :: 标签
+figure_options.field_scale :: Scale :: Шкала :: 比例
+figure_options.axis_section_x :: <b>X-Axis</b> :: <b>Ось X</b> :: <b>X 轴</b>
+figure_options.axis_section_y :: <b>Y-Axis</b> :: <b>Ось Y</b> :: <b>Y 轴</b>
+figure_options.axis_section_z :: <b>Z-Axis</b> :: <b>Ось Z</b> :: <b>Z 轴</b>
+figure_options.regenerate_legend :: (Re-)Generate automatic legend :: (Пере)создать легенду :: （重新）生成图例
+figure_options.ls_solid :: Solid :: Сплошная :: 实线
+figure_options.ls_dashed :: Dashed :: Штриховая :: 虚线
+figure_options.ls_dashdot :: Dash-Dot :: Штрих-пунктир :: 点划线
+figure_options.ls_dotted :: Dotted :: Пунктирная :: 点线
+figure_options.ls_none :: None :: Нет :: 无
+figure_options.draw_default :: Default :: По умолчанию :: 默认
+figure_options.draw_steps_pre :: Steps (Pre) :: Ступени (нач.) :: 阶梯（前）
+figure_options.draw_steps_mid :: Steps (Mid) :: Ступени (сер.) :: 阶梯（中）
+figure_options.draw_steps_post :: Steps (Post) :: Ступени (кон.) :: 阶梯（后）
+figure_options.section_line_html :: <b>Line</b> :: <b>Линия</b> :: <b>线</b>
+figure_options.field_line_style :: Line style :: Стиль линии :: 线型
+figure_options.field_draw_style :: Draw style :: Тип рисования :: 绘制方式
+figure_options.field_width :: Width :: Толщина :: 线宽
+figure_options.field_color_rgba :: Color (RGBA) :: Цвет (RGBA) :: 颜色 (RGBA)
+figure_options.section_marker_html :: <b>Marker</b> :: <b>Маркер</b> :: <b>标记</b>
+figure_options.field_style :: Style :: Стиль :: 样式
+figure_options.field_size :: Size :: Размер :: 大小
+figure_options.field_face_color_rgba :: Face color (RGBA) :: Цвет заливки (RGBA) :: 面颜色 (RGBA)
+figure_options.field_edge_color_rgba :: Edge color (RGBA) :: Цвет контура (RGBA) :: 边颜色 (RGBA)
+figure_options.field_colormap :: Colormap :: Цветовая карта :: 色图
+figure_options.field_min_value :: Min. value :: Мин. значение :: 最小值
+figure_options.field_max_value :: Max. value :: Макс. значение :: 最大值
+figure_options.field_interpolation :: Interpolation :: Интерполяция :: 插值
+figure_options.field_interpolation_stage :: Interpolation stage :: Этап интерполяции :: 插值阶段
+export.name_label :: Name :: Название :: 名称
+export.section :: Section :: Секция :: 节
+export.section_name_analysis :: ANALYSIS LOG :: ANALYSIS LOG :: ANALYSIS LOG
+export.al_col_rel_p :: Relative pressure :: Относительное давление :: 相对压力
+export.al_col_pressure :: Pressure :: Давление :: 压力
+export.al_col_volume :: Adsorbed volume :: Объём адсорбции :: 吸附量
+export.al_unit_pressure :: mm Hg :: мм рт. ст. :: 毫米汞柱
+export.al_unit_volume :: (cc/g STP) :: (см3/г STP) :: (cc/g STP)
+export.section_name_bjh :: BJH DESORPTION PORE DISTRIBUTION REPORT :: BJH DESORPTION PORE DISTRIBUTION REPORT :: BJH DESORPTION PORE DISTRIBUTION REPORT
+export.bjh_h1_pore_d_max :: Pore diameter (max) :: Максимальный диаметр пор :: 最大孔径
+export.bjh_h1_pore_d_min :: Pore diameter (min) :: Минимальный диаметр пор :: 最小孔径
+export.bjh_h1_pore_d_avg_a :: Average pore diameter (Å) :: Средний диаметр пор :: 平均孔径
+export.bjh_h1_incr_vol :: Incremental pore volume :: Инкрементальный объем пор :: 孔体积增量
+export.bjh_h1_cum_vol :: Cumulative pore volume :: Кумулятивный объем пор :: 孔体积（累计）
+export.bjh_h1_incr_area :: Incremental pore area :: Инкрементальная площадь пор :: 表面积（增量）
+export.bjh_h1_cum_area :: Cumulative pore area :: Кумулятивная площадь пор :: 表面积（累计）
+export.bjh_h1_avg_nm :: Pore diameter (nm) :: Средний диаметр пор :: 孔径（nm）
+export.bjh_h1_dVdD :: dV/dD :: dV/dD :: dV/dD
+export.bjh_h2_a :: A :: A :: A
+export.bjh_h2_cc_g :: cc/g :: см3/г :: cc/g
+export.bjh_h2_m2g :: m2/g :: м2/г :: m2/g
+export.bjh_h2_nm :: nm :: нм :: nm
+export.bjh_h2_per_nm_g :: cm3/nm/g :: см3/нм/г :: cm3/nm/g
+export.filter_xlsx :: Excel Workbook (*.xlsx) :: Книга Excel (*.xlsx) :: Excel 工作簿 (*.xlsx)
+export.filter_csv :: CSV, semicolon (*.csv) :: CSV, с разделителем «;» (*.csv) :: 分号分隔 CSV (*.csv)
+export.default_filename :: export.xlsx :: export.xlsx :: export.xlsx
+export.summary_choose_mode :: Do you want to export to a single file? :: Вы хотите провести экспорт в один файл? :: 要导出为单个文件吗？
+export.to_one_file :: In one file :: В один файл :: 单个文件
+export.to_many_files :: In several files :: В несколько файлов :: 多个文件
+export.cancel :: Cancel :: Отмена :: 取消
+export.no_checked_files :: No files are selected. Check the files to export. :: Не выбран ни один файл. Отметьте чекбоксами файлы для экспорта. :: 未选择任何要导出的文件。
+export.no_session :: Nothing to export. :: Нет данных для экспорта. :: 没有可导出的数据。
+export.name_template_title :: File name pattern :: Шаблон имени файла :: 文件名模式
+export.name_template_label :: Use the literal {sample_name} in the text to insert each sample. If the pattern does not contain {sample_name}, a single base string is used with a numeric suffix: base_1, base_2, and so on. :: Укажите {sample_name} в строке, чтобы подставлять имя. Если {sample_name} в строке нет — к заданной базе добавляется суффикс _1, _2, … :: 在文本中保留 {sample_name} 以替换成样本名。若不含 {sample_name}，则对同一前缀追加 _1、_2 等。
+export.name_template_default :: {sample_name} :: {sample_name} :: {sample_name}
+export.save_failed :: Export failed. :: Не удалось выполнить экспорт. :: 导出失败。
